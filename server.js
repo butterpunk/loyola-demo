@@ -104,13 +104,14 @@ app.post('/post-newTodos', function(request, response){
  });
 
 // define the folder that will be used for static assets
-app.use(Express.static(path.join(__dirname, '../public')));
+app.use(express.static('public'));
+
 
 // handle every other route with index.html, which will contain
 // a script tag to your application's JavaScript file(s).
-app.get('*', function (request, response){
-    response.sendFile(path.resolve(__dirname, '../public', 'index.html'));
-});
+// app.get('*', function (request, response){
+//     response.sendFile(path.resolve(__dirname, '../public', 'index.html'));
+// });
 
 	// response.send(request.body);
 	// console.log('this route is being hit');
