@@ -18,15 +18,15 @@ mongoose.connect('mongodb://heroku_qgcjr9k0:dk9hse1csiu0l52rljicap4vsc@ds153392.
 	else console.log('mongo connected');
 });
 
-mongoose.model('todo', Schema); 
-var Todo = mongoose.model('todo');
-
+//mongoose.model('todo', Schema); 
+//var Todo = mongoose.model('todo');
+var Todo = mongoose.model('todo', Schema);
 
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-app.listen(port, function(err) {  
+app.listen(process.env.port || 5000, function(err) {  
   if (err) {
     return console.log('something bad happened', err)
   }
