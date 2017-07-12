@@ -42,7 +42,7 @@ app.get('/todo-app', function(request, response) {
 		if(err){
 			console.log(err)
 		}else{
-			res.send(todo);
+			response.send(todo);
 			console.log(todo);
 		}
 	});
