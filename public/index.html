@@ -34,7 +34,7 @@
 			console.log('error:',err);
 		}
 	})*/
-	$.get('http://localhost:3000/get-allTodos', function(data){
+	$.get('/get-allTodos', function(data){
 		var element="";
 		for(var i = 0; i < data.length; i++){
 			element+= '<div class="container"><h2>'+data[i].description+'</h2><p>'+ data[i].due_date+'</p></div>';
