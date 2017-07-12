@@ -26,13 +26,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-app.listen(process.env.port || 5000, function(err) {  
+app.listen(process.env.PORT || 5000, function(err) {  
   if (err) {
     return console.log('something bad happened', err)
   }
 
 
-  console.log(`Magic is happening on ${port}`)
+  console.log(`Magic is happening on ${process.env.PORT}`)
 });
 
 
