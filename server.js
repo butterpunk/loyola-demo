@@ -103,7 +103,7 @@ app.post('/post-newTodos', function(request, response){
 
  });
 
-
+ app.use('/public');
 
 	// response.send(request.body);
 	// console.log('this route is being hit');
